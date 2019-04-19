@@ -1,5 +1,5 @@
 # Memory Game 
-## Recommendations ##
+## Initial Criteria ##
 The game has to meet following criteria:
 * Randomly shuffle cards
 * Two identical cards are matched and remain open. If the cards don't match, they flip back.
