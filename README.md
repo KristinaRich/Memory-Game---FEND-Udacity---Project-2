@@ -1,5 +1,5 @@
 # Memory Game 
-##Recommendations##
+## Recommendations ##
 The game has to meet following criteria:
 * Randomly shuffle cards
 * Two identical cards are matched and remain open. If the cards don't match, they flip back.
@@ -8,7 +8,7 @@ The game has to meet following criteria:
 
 The game can be reviewed here:
 
-##Implementation##
+## Implementation ##
 I used Vanilla JS and tried to apply the theory from lesson 2 ("Javascript & The DOM"). To implement an animation effects, I used the library animate.css. I also used Google Fonts (Bangers and Coda).
 Following resources provided major help while implementing the code:
 * Tutorial with Ryan Waite: https://www.youtube.com/watch?v=oECVwum-7Zc
