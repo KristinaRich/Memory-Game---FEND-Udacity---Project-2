@@ -49,8 +49,8 @@ function shuffle(array) {
 function createElement() {
 	 for (let i = 0; i < cardsArray.length; i ++) {
 		 let singleCard = document.createElement('li');
-     singleCard.classList.add('card');
-     //I would rather use template literals, but due to issues with IE11 I will go with simple concatenation
+                 singleCard.classList.add('card');
+                 //I would rather use template literals, but due to issues with IE11 I will go with simple concatenation
 		 singleCard.innerHTML = "<i class=" + "'fa " + cardsArray[i] + "'></i>";
 		 deck.appendChild(singleCard);
 		 cardDeck.push(singleCard);
@@ -63,45 +63,48 @@ function clickOnCard() {
 	for (let i = 0; i < cards.length; i++) {
 		function openCards() {
 
-			if (flippedCards >= 1) {
-   			for (let i = 0; cards.length < i; i++) {
-        cards[i].classList.add('blocked');
-				}
-			}
-			else {
-        cards[i].classList.add('open', 'show');
-				openedCards++;
-			}
+		  if (flippedCards >= 1) {
+   	          for (let i = 0; cards.length < i; i++) {
+                      cards[i].classList.add('blocked');
+		      }
+			  
+	          } else {
+                      cards[i].classList.add('open', 'show');
+		      openedCards++;
+		      }
 
-			// First card clicked => timer starts
+		// First card clicked => timer starts
 			if (openedCards == 1) {
-				startTimer();
-			}
-			else {
-				return;
+			   startTimer();
+				
+			} else {
+			    return;
 			}
 		}
-    //Allow only two cards
-		function limitCards() {
-			if (flippedCards.length < 2) {
-				flippedCards.push(cards[i]);
-			}
+		
+//Allow only two cards
+function limitCards() {
+	if (flippedCards.length < 2) {
+	       flippedCards.push(cards[i]);
+		}
 
-			if (flippedCards.length === 1) {
-				cards[i].classList.add('blocked');
-			}
-			if (flippedCards.length === 2) {
-				for (let i = 0; cards.length < i; i++) {
-					cards[i].classList.add('blocked');
-				}
-				firstFlippedCard = flippedCards[0];
-				secondFlippedCard = flippedCards[1];
+	          if (flippedCards.length === 1) {
+		      cards[i].classList.add('blocked');
+		´     }
+		  if (flippedCards.length === 2) {
+		     for (let i = 0; cards.length < i; i++) {
+		      cards[i].classList.add('blocked');
+		      }
+		      firstFlippedCard = flippedCards[0];
+		      secondFlippedCard = flippedCards[1];
 
         movesCounter();
       	starRating();
       	compareCards();
-			}
-		}
+	             }
+       }
+		
+              //Manage event listeners
 		function addClick() {
 			cards[i].addEventListener('click', openCards);
 			cards[i].addEventListener('click', limitCards);
@@ -115,17 +118,17 @@ function clickOnCard() {
 		}
 		else {
 			addClick();
-		}
-	}
-}
+		  }
+	        }
+               }
 
-// Check if the cards match.
+// Check if the cards match comparing two array elements' innerHTML.
 function compareCards() {
 	if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
-		matchYes();
+	   matchYes();
 
 	} else {
-  	matchNo();
+  	  matchNo();
 
 	}
 	flippedCards = [];
@@ -134,7 +137,7 @@ function compareCards() {
 // Matched cards get new class 'match' and become a part of a new array
 function matchYes() {
 	for (let i = 0; cards.length < i; i++) {
-		cards[i].classList.add('blocked');
+	    cards[i].classList.add('blocked');
 	}
 	flippedCards[0].classList.add('match', 'animated', 'heartBeat');
 	flippedCards[1].classList.add('match', 'animated', 'heartBeat');
@@ -144,15 +147,15 @@ function matchYes() {
 	finishGame();
 }
 
-// If the cards don´t match, they flip back.
+// If the cards don´t match, they flip back after a minimal period of time.
 function matchNo() {
 	flippedCards = [];
 	for (let i = 0; cards.length < i; i++) {
-		cards[i].classList.add('blocked');
+            cards[i].classList.add('blocked');
 	}
 
 	setTimeout(function() {
-    firstFlippedCard.classList.remove('open', 'show', 'blocked');
+             firstFlippedCard.classList.remove('open', 'show', 'blocked');
 		secondFlippedCard.classList.remove('open', 'show', 'blocked');
 	}, 650);
 }
@@ -200,6 +203,7 @@ restartButton.addEventListener('click', function() {
 	window.location.reload();
 });
 
+//Implement the result modal
 let resultModal = document.querySelector('.result-modal');
 
 function showModal() {
