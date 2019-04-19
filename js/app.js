@@ -209,7 +209,7 @@ let resultModal = document.querySelector('.result-modal');
 function showModal() {
 
  let totalScore = document.querySelector('.total-score');
- totalScore.innerHTML= moveNum + ' moves' +', '+ starsNum +' stars' +' in ' + m +' m '+ s +' s '+'!';
+ totalScore.innerHTML= 'Your score: ' + moveNum + ' moves' +', '+ starsNum +' stars' +' in ' + m +' m '+ s +' s '+'!';
  resultModal.style.display='block';
 }
 
