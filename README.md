@@ -13,8 +13,8 @@ I used Vanilla JS and tried to apply the theory from lesson 2 ("Javascript & The
 Following resources provided major help while implementing the code:
 * Tutorial with Ryan Waite: https://www.youtube.com/watch?v=oECVwum-7Zc
 * Tutorial with Mike Wales: https://www.youtube.com/watch?v=oECVwum-7Zc
-* Tutorial on scotch.io: https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
-* Memory Game Walkthrough by Matthew Cranford: https://matthewcranford.com/category/blog-posts/walkthrough/memory-game/
+* Tutorial on scotch.io: https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript - in particular with matching logic
+* Memory Game Walkthrough by Matthew Cranford: https://matthewcranford.com/category/blog-posts/walkthrough/memory-game/ - in particular with implementing a modal
 
 Although it was helpful to discuss other ressources in case of bugs or further issues, my objective was to create a code on my own with my actual knowledge.
 
